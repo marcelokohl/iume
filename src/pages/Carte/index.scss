@@ -1,0 +1,214 @@
+@import "./View";
+
+.Carte {
+	position: relative;
+	.float-nav {
+		position: fixed;
+    right: 20px;
+    bottom: 70px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+	}
+	.carte-actions {
+		display: flex;
+    justify-content: center;
+		& > * {
+			width: 72px;
+			color: color(dark)!important;
+			// margin-right: space(3);
+		}
+		.Button {
+			background-color: transparent;
+			color: color(dark)!important;
+			height: auto;
+			font-size: 28px;
+			margin: 0;
+		}
+	}
+	.carte-actions-bar {
+		border-top: 1px solid color(dark, ui);
+		padding: space(1) 0;
+		position: fixed; right: 0; left: 0;
+		bottom: 0;
+		background: color(light);
+		z-index: 1;
+		// margin-bottom: space(2);
+	}
+	.carte-actions-aside {
+    flex-direction: column;
+		position: fixed;
+		.ButtonAction {
+			margin-bottom: space(2);
+		}
+	}
+
+	.carte-header {
+		background-color: color(light);
+		position: fixed; right: 0; left: 0;
+		top: 0;
+		padding: 56px 0 0;
+    z-index: 1;
+		border-bottom: 1px solid color(dark, ui);
+		& > .Button {
+			margin: 0;
+		}
+		.Tabs {
+			margin: 0;
+			border-bottom: 0;
+
+			// .Tab {
+			// 	&:first-child {
+			// 		padding-left: 0;
+			// 		&:after {
+			// 			left: 0;
+			// 		}
+			// 	}
+			// }
+		}
+		@include media-breakpoint(lg) {
+			padding-top: 84px;
+		}
+	}
+	&.with-alert {
+		.carte-header {
+			padding: 140px 0 0;
+			@include media-breakpoint(lg) {
+				padding-top: 162px;
+			}
+		}
+	}
+
+	.carte-main {
+		padding: 122px 0 80px;
+		@include media-breakpoint(lg) {
+			padding: 200px 0 30px;
+		}
+	}
+
+	.carte-title {
+		display: flex;
+    align-items: center;
+    justify-content: space-between;
+		margin-bottom: 1rem;
+		& > * {
+			margin: 0;
+		}
+		.Button {
+			width: 28px;
+			height: 28px;
+			border-color: color(dark, muted);
+			color: color(dark, muted);
+		}
+	}
+	.card-carte-drag {
+		display: flex;
+		margin-bottom: space(2);
+		&.sortable-chosen {
+			.Card {
+				border-color: color(primary);
+			}
+		}
+		.Card {
+			pointer-events: none;
+			flex-shrink: 1;
+	    width: 100%;
+			margin: 0;
+			h6 {
+				margin: space(1) ;
+			}
+		}
+		.handle {
+	    font-size: 31px;
+			cursor: grab;
+			&:active {
+				cursor: grabbing;
+			}
+		}
+		.card-body {
+			.card-info {
+				padding: space(1)!important;
+			}
+		}
+	}
+
+	.card-carte {
+		.card-body {
+			padding: 0;
+			@include media-breakpoint(lg) {
+				flex-direction: column-reverse;
+				.card-info {
+					width: 100%;
+					padding: space(2);
+				}
+				.card-image {
+			    width: 100%;
+					&:before {
+						padding-top: 60%;
+					}
+				}
+			}
+		}
+	}
+	&.carte-home {
+		#section-0 {
+			margin-top: 0;
+		}
+	}
+	&.carte-sort {
+		.carte-main {
+			padding: 130px 0 80px;
+
+			@include media-breakpoint(lg) {
+				padding: 180px 0 80px;
+			}
+			@include media-breakpoint-max(lg) {
+					#section-0 {
+						margin-top: 0;
+					}
+			}
+		}
+	}
+	&.carte-sections {
+		.carte-main {
+			padding: 130px 0 80px;
+
+			@include media-breakpoint(lg) {
+				padding: 210px 0 80px;
+			}
+		}
+	}
+
+
+	@include media-breakpoint(sm) {
+		.carte-header {
+			.Tabs {
+				.Tab {
+					&:first-child {
+						padding-left: 0;
+						&:after {
+							left: 0;
+						}
+					}
+				}
+			}
+			@include media-breakpoint(lg) {
+				padding-top: 84px;
+			}
+		}
+	}
+	@include media-breakpoint-max(sm) {
+		.tabs-container {
+			padding: 0;
+			width: 100%;
+		}
+	}
+}
+
+
+
+.flex-space-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

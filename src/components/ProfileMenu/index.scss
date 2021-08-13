@@ -1,0 +1,45 @@
+.profile-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: flex;
+    padding: space(1) 0;
+    margin-bottom: space(1);
+    border-bottom: 1px solid color(dark, ui);
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+    &:hover, &.active {
+      // h4 {
+        color: color(primary);
+      // }
+    }
+    i {
+      font-size: 34px;
+      margin-right: space(1);
+    }
+
+    span {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      h4, p {
+        margin: 0;
+      }
+      p {
+        color: color(dark, disabled);
+      }
+    }
+
+    span + i {
+      font-size: 30px;
+      margin: 0 0 space(1);
+    }
+  }
+}

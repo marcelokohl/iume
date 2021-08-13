@@ -1,0 +1,16 @@
+@import "./Carte";
+@import "./Home";
+@import "./Profile";
+
+
+.card-page {
+  @include media-breakpoint-max(lg) {
+    padding: 0;
+    border: 0;
+
+    .card-body {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

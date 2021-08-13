@@ -1,0 +1,30 @@
+image: node:12.18.3
+
+pipelines:
+  default:
+      - step:
+          caches:
+            - node
+          script:
+            - npm install
+  branches:
+    production_site:
+      - step:
+          script:
+            - export HEROKU_APP_NAME="iume-site"
+            - deploy/deploy
+    staging_site:
+      - step:
+          script:
+            - export HEROKU_APP_NAME="iume-site-stage"
+            - deploy/deploy   
+    development_site:
+      - step:
+          script:
+            - export HEROKU_APP_NAME="iume-site-dev"
+            - deploy/deploy
+    development_site_2:
+      - step:
+          script:
+            - export HEROKU_APP_NAME="iume-site-dev-2"
+            - deploy/deploy

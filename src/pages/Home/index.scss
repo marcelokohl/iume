@@ -1,0 +1,29 @@
+.page-home {
+
+  .home-thumb {
+    height: 130px;
+  }
+  .home-actions {
+    text-align: center;
+    a {
+      font-weight: normal;
+      color: color(dark, muted);
+      margin: space(1);
+    }
+  }
+  .size-1-5 {
+    max-width: 136px;
+  }
+  .page-main {
+    padding-bottom: 60px;
+  }
+  // h2, h3, h4 {
+  //   text-align: center;
+  // }
+  // .how {
+  //   .Image {
+  //     display: block;
+  //     margin: 0 auto;
+  //   }
+  // }
+}

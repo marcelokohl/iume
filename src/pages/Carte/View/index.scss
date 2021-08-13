@@ -1,0 +1,63 @@
+.Carte.page-view {
+  .carte-header {
+    padding-top: 0;
+  }
+  .carte-main {
+    padding-top: 120px;
+  }
+  .Card {
+    cursor: pointer;
+  }
+  .size-1-2 {
+    max-width: 96px;
+  }
+  .modal-product {
+    overflow: hidden;
+    .modal-header {
+      display: none;
+    }
+    .modal-body {
+      padding: 0;
+    }
+
+    .Image {
+      padding-bottom: 60%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .bottom-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    pointer-events: none;
+    .Button, .Button:active, .Button:focus {
+      pointer-events: all;
+    	border-color: color(dark, muted);
+      opacity: 1;
+
+    	i {
+    		color: color(dark, muted);
+    		font-size: 1.9rem;
+    	}
+
+    	&:hover {
+    		background-color: color(light);
+    	}
+    }
+    .Container {
+      text-align: right;
+    }
+  }
+}

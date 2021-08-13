@@ -1,0 +1,26 @@
+.CookieAlert {
+  position: fixed;
+  bottom: space(2);
+  left: 0;
+  right: 0;
+  transition: 0.6s;
+  z-index: 101;
+  .CookieAlert-inner {
+    background: rgba(#FFF1E9, .95);
+    font-size: 12px;
+    padding: space(2);
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+  &.ok {
+    transform: translateY(150%);
+  }
+  @include media-breakpoint-max(sm) {
+    bottom: space(1);
+    left: space(1);
+    right: space(1);
+    .Container {
+      padding: 0;
+    }
+  }
+}

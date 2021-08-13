@@ -1,0 +1,35 @@
+.Profile {
+	@include media-breakpoint(lg) {
+		.profile-menu {
+			span + i {
+				display: none;
+			}
+		}
+	}
+	@include media-breakpoint-max(lg) {
+		.profile-menu-container-open, .profile-page-divider-container {
+			display: none;
+		}
+	}
+}
+
+.profile-page-divider {
+	display: flex;
+  height: calc(100% + 50px);
+  justify-content: center;
+  margin-top: -36px;
+	&:before {
+		content: "";
+		background: color(dark,ui);
+		height: 100%;
+		width: 1px;
+	}
+}
+//
+// .profile-menu-container {
+// 	@include media-breakpoint-max(lg) {
+// 		&.profile-menu-container-open {
+// 			display: none;
+// 		}
+// 	}
+// }

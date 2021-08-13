@@ -1,0 +1,39 @@
+.LoginPage {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg, color(light) 50%, color(primary) 50.01%);
+  .page-main {
+    width: 100%;
+    & > .Container {
+      height: 100%;
+    }
+  }
+  .Container {
+    position: relative;
+  }
+
+	@include media-breakpoint-max(lg) {
+    .ButtonBack {
+      position: absolute;
+      top: 10px;
+      left: 0;
+    }
+		background: color(light);
+		.col-right {
+			display: none;
+		}
+	}
+}
+
+.card-login {
+  width: 100%;
+	@include media-breakpoint(lg) {
+    position: relative;
+    background: color(light);
+    padding: space(3);
+    border: 1px solid color(dark, ui);
+    box-sizing: border-box;
+    border-radius: space(1);
+	}
+}

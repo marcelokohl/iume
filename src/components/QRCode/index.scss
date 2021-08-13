@@ -1,0 +1,10 @@
+.QRCode {
+  margin: space(2);
+  border-radius: space(1);
+  border: 1px solid color(dark, ui);
+  padding: space(3);
+  canvas {
+    width: 160px!important;
+    height: 160px!important;
+  }
+}

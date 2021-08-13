@@ -1,0 +1,48 @@
+.card-carte {
+	overflow: hidden;
+	margin-bottom: space(2);
+
+	.card-body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.card-info {
+			padding: space(1);
+			& > * {
+				margin: 0 0 .5rem;
+			}
+			h6, p {
+				font-size: $font-size-small;
+			}
+			p {
+				color: color(dark, muted);
+				margin-bottom: space(2);
+			}
+		}
+		.card-image {
+			width: 110px;
+    	flex-shrink: 0;
+
+		}
+	}
+	.card-footer {
+		padding: 1rem;
+		display: flex;
+		justify-content: space-between;
+		.Button {
+			margin: 0;
+			width: 24px;
+    	height: 24px;
+		}
+		.Field-switch {
+			margin: 0;
+
+			span {
+				margin: 0;
+			}
+		}
+	}
+	.card-image {
+
+	}
+}

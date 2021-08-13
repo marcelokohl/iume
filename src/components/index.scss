@@ -1,0 +1,212 @@
+@import "blackflag/scss";
+@import "./CardCarte";
+@import "./Menu";
+@import "./Logo";
+@import "./LoginPage";
+@import "./ButtonAction";
+@import "./ButtonList";
+@import "./ButtonBack";
+@import "./PageFooter";
+@import "./QRCode";
+@import "./HomeNav";
+@import "./CookieAlert";
+@import "./ProfileMenu";
+
+.Tabs {
+  position: relative;
+}
+.hide-counter {
+  .field-max-length {
+    display: none;
+  }
+}
+.text-white-space-pre {
+  white-space: pre;
+}
+.Spinner.spinner-page {
+  border-color: color(primary) color(primary) color(primary) transparent;
+  font-size: 0.45em;
+  margin: 4em auto;
+}
+.Card {
+  border-radius: 12px;
+}
+.modal-footer {
+  .Button {
+    margin-bottom: 0;
+  }
+}
+.modal-header {
+  font-weight: bold;
+}
+.modal-content {
+  border-radius: 12px;
+}
+.error {
+  .field-label {
+    color: color(error);
+  }
+}
+.field-label {
+  color: color(dark, muted);
+  font-weight: bold;
+}
+.field-required-text {
+  font-weight: normal;
+  margin-left: auto;
+}
+
+.enter-password-check {
+  list-style: none;
+  padding: 0;
+  i {
+    font-size: 2.2em;
+    margin-right: space(2);
+  }
+  li {
+    color: color(dark, muted);
+    display: flex;
+    align-items: center;
+    margin-bottom: space(1);
+
+    &.text-success {
+      color: color(success);
+    }
+  }
+}
+
+.Button {
+	&.primary {
+		color: color(light)!important;
+	}
+  @include make-breakpoints() using ($suffix) {
+    // &.full#{$suffix} {
+    //   min-width: initial;
+    // }
+    &.normal#{$suffix} {
+      // min-width: initial;
+      min-width: 160px;
+    }
+  }
+}
+@include make-breakpoints() using ($suffix) {
+  .flex-column-reverse#{$suffix} {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .flex-row#{$suffix} {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.Card.disabled {
+  opacity: 0.4;
+  filter: grayscale(1);
+}
+.Field-password .field-after {
+  top: 20px;
+  height: 39px;
+  width: 49px;
+  font-size: 1.6rem;
+  color: color(dark, muted);
+}
+.Field-image {
+  .Button {
+    color: color(light);
+    background-color: color(dark, muted);
+    border-color: transparent;
+  }
+  .field-image-area {
+    .Button:after {
+        content: "Enviar";
+        margin-left: space(1);
+    }
+    &.has-file {
+      .Button {
+        background-color: transparent;
+        border:0;
+        color: color(light);
+        &:after {
+          content: "Excluir foto";
+        }
+        i {
+          border: 2px solid color(light);
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          margin-right: space(1);
+        }
+      }
+      &:after {
+        content: "";
+        background: transparent;
+        background: linear-gradient(0deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 100%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+      }
+    }
+  }
+}
+
+.Field-switch > input:checked + span {
+  background-color: color(success);
+}
+
+.modal-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.page-alert-container {
+  [class*=Icon-] {
+    font-size: 30px;
+    margin-right: space(2);
+  }
+  a {
+    color: color(light);
+    text-decoration: underline;
+  }
+  .Container > span {
+    display: flex;
+    align-items: center;
+  }
+  .Container > div {
+    display: flex;
+    align-items: flex-start;
+  }
+
+	.page-alert {
+		top: 57px;
+    z-index: 2;
+	}
+	@include media-breakpoint(lg) {
+		// padding-top: 60px;
+
+		.page-alert {
+			top: 80px;
+		}
+	}
+}
+
+.video {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding: 2rem 0;
+	@include aspect-ratio(16,9);
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+	iframe {
+    // background: black;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+    border: 0;
+	}
+}

@@ -1,0 +1,13 @@
+.ButtonAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:color(dark, muted);
+  font-size: .8em;
+  // font-weight: bold;
+  text-align: center;
+  .Button {
+    margin-bottom: space(1);
+    font-size: 1.6rem;
+  }
+}

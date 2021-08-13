@@ -1,0 +1,27 @@
+.ButtonList {
+  background-color: color(dark, ui);
+  padding: 3px;
+  border-radius: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+
+  button {
+    all: unset;
+    cursor: pointer;
+    font-family: $font-family;
+    background-color: transparent;
+    border: 0;
+    padding: 0 space(2);
+    border-radius: 40px;
+    height: 32px;
+    color: color(dark);
+    font-weight: bold;
+    transition: .3s;
+
+    &.active {
+      color: color(light);
+      background-color: color(primary);
+    }
+  }
+}

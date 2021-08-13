@@ -1,0 +1,6 @@
+.PageFooter {
+	padding-bottom: space(6);
+	@include media-breakpoint-max(lg) {
+		padding-bottom: space(8);
+	}
+}

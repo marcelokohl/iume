@@ -1,0 +1,85 @@
+.Menu {
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	border-bottom: 1px solid color(dark, ui);
+	background-color: color(light);
+		padding: space(1) 0;
+  z-index: 2;
+	.Container {
+		position: relative;
+		display: flex;
+  	justify-content: center;
+
+		a {
+			display: flex;
+  		flex-direction: column;
+			font-weight: bold;
+			padding: space(1) space(2);
+			color: color(dark);
+
+			&.active {
+				color: color(primary);
+			}
+		}
+
+		a {
+			flex-direction: revert;
+  		align-items: center;
+			i {
+				font-size: 24px;
+				margin-right: space(1);
+			}
+			&:nth-child(2) {
+				padding-left: 0;
+			}
+			&:last-child {
+				margin-left: auto;
+				padding-right: 0;
+				i {
+					margin: 0;
+				}
+				span {
+					display: none;
+				}
+			}
+		}
+		.Button {
+			transform: translateY(calc(-100% - 1rem));
+	    position: absolute;
+	    right: 0;
+		}
+	}
+	i {
+		font-size: 32px;
+		line-height: 1em;
+	}
+	.Logo {
+		display: none;
+	}
+	@include media-breakpoint(lg) {
+		padding: space(2) 0 space(1);
+		.Container {
+			justify-content: left;
+			align-items: center;
+
+			.Logo {
+				display: block;
+				height: 36px;
+				margin-right: space(7);
+			}
+			a {
+
+				&:last-child {
+					i {
+						margin: space(1);
+					}
+					span {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
